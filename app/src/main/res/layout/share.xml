@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#718EE4"
+     >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            
+            <LinearLayout
+                android:id="@+id/llheader"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+        
+        <ImageView 
+            android:id="@+id/backShare"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:layout_gravity="center"
+            android:src="@drawable/back_arrow"
+            />
+        
+        <TextView 
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:text="Share"
+            android:textColor="#ffffff"
+            android:gravity="center_vertical"
+            android:shadowColor="#7000"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="3"
+            style="@android:style/TextAppearance.Large"
+            />
+        
+        </LinearLayout>
+            
+
+            
+
+            <LinearLayout
+                android:id="@+id/ratinglinear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+               android:paddingTop="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_below="@+id/llheader"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:duplicateParentState="true"
+                    android:src="@drawable/rating" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Rate this Application"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/facebookLinear"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/imageView4"
+                android:clickable="true" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:src="@drawable/facebook" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Facebook"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/facebookLinear"
+                android:scaleType="fitXY"
+                android:src="@drawable/separator" />
+
+            <LinearLayout
+                android:id="@+id/whatsappLinear"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/imageView5"
+                android:clickable="true" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:src="@drawable/whaap" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Whatsapp"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/whatsappLinear"
+                android:scaleType="fitXY"
+                android:src="@drawable/separator" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/ratinglinear"
+                android:layout_marginLeft="19dp"
+                android:paddingTop="20dp"
+                android:text="Share"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textView4"
+                android:scaleType="fitXY"
+                android:src="@drawable/separator" />
+
+            <LinearLayout
+                android:id="@+id/googleLinear"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/imageView6"
+                android:clickable="true" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:src="@drawable/googleplus" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Google+"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/googleLinear"
+                android:scaleType="fitXY"
+                android:src="@drawable/separator" />
+
+            
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

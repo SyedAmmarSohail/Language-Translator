@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#944084"
+    tools:context=".CountryListView" >
+
+    <!-- Search Screen header -->
+
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:clickable="true"
+            android:paddingBottom="8dp"
+            android:paddingRight="7dp"
+            android:paddingTop="8dp" >
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/chooseCountryTV" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/back_arrow" />
+
+         
+
+            <TextView
+                android:id="@+id/chooseCountryTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/shizupLogo"
+                android:text="Choose a country"
+                android:textColor="#ffffff"
+                android:paddingLeft="10dp"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- SearchBox EditText field -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headerLayout"
+        android:background="#33ffffff" >
+
+        <RelativeLayout
+            android:id="@+id/searchLayout"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/custom_edittext" >
+
+            <!--
+                 <EditText
+                android:id="@+id/searchET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:drawableLeft="@drawable/search_icon"
+                android:drawablePadding="8dp"
+                android:hint="Search..."
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff" />
+            -->
+
+            <com.example.ammar.languagetranslator.CustomAutoCompleteView
+                android:id="@+id/searchET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:drawableLeft="@drawable/search_icon"
+                android:drawablePadding="8dp"
+                android:dropDownHeight="0dp"
+                android:hint="Search..."
+                android:inputType="textCapSentences"
+                android:singleLine="true"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff">
+                </com.example.ammar.languagetranslator.CustomAutoCompleteView>
+        </RelativeLayout>
+
+        <!-- Search Listview -->
+
+        <ListView
+            android:id="@+id/countryLV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/searchLayout"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:fadeScrollbars="false"
+            android:fadingEdge="none"
+            android:listSelector="@android:color/transparent"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbars="vertical"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbarThumbVertical="@drawable/fastscroll_thumb"
+            android:scrollbarSize="2dip" />
+    </RelativeLayout>
+
+</RelativeLayout>

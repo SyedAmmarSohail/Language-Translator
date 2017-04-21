@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#718EE4" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <ImageView
+            android:id="@+id/backVoice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.2"
+            android:src="@drawable/back_arrow" />
+
+        <TextView
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:gravity="center_vertical"
+            android:shadowColor="#7000"
+            android:shadowDx="4"
+            android:shadowDy="4"
+            android:shadowRadius="3"
+            android:text="Voice Converter"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/voiceImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        style="@android:style/TextAppearance.Large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/voiceImage"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="Say, to translate."
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/trySaying"
+        style="@android:style/TextAppearance.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/voiceImage"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="#e5e5e5"
+        android:text="Try Saying" />
+
+    <ListView
+        android:id="@+id/list"
+        style="@android:style/TextAppearance.Large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/trySaying"
+        android:gravity="center"
+        android:text="Hello" />
+
+    <TextView
+        android:id="@+id/returnedError"
+        style="@android:style/TextAppearance.Large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/trySaying"
+        android:gravity="center"
+        android:text="Hello"
+        android:visibility="invisible" />
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ammar.languagetranslator">
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+
+            android:name="PDFViewActivity_">
+        </activity>
+        <activity
+            android:name="com.example.ammar.languagetranslator.CountryListView"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.ammar.languagetranslator.LanguageText"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.ammar.languagetranslator.LanguageVoice"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.ammar.languagetranslator.LanguageAudio"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.ammar.languagetranslator.Share"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.ammar.languagetranslator.Feedback"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.ammar.languagetranslator.About"
+            android:screenOrientation="portrait" >
+        </activity>
+
+    </application>
+
+</manifest>
